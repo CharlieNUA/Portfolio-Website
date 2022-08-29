@@ -9,9 +9,9 @@
    <meta name="viewport" content="width=device-width, intial-scale =1.0">
    <style>
     body {
-    margin: 15;
+    margin: 0;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Tahoma;
    }
 
 .topnav {
@@ -19,7 +19,8 @@
   background-color: #232323;
   padding: 18px 0px;
   width: 331px;
-  margin-left: 300px;
+  margin-left: 500px;
+  margin-right: 500px;
 
 }
 
@@ -33,19 +34,56 @@
 }
 
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  background-color: #1c1c1c;
+  color: white;
 }
 
 .topnav a.active {
-  background-color: #708090;
+  background-color: #2b2b2b;
   color: white;
 }
 
 div.Titles{
 
-  margin-left: 300px;
+  margin-left: 500px;
+  margin-right: 500px;
   padding-top: 2px;
+  max-height:1000px;
+  max-width:1000px;
+}
+footer{
+  color: #f2f2f2;
+  padding-top: 2px;
+  background-color: #232323;
+  text-align: center;
+  max-height:1000px;
+  max-width:1000px;
+
+}
+div.gallery {
+  margin: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px
+
+
+}
+
+div.gallery:hover {
+
+}
+
+div.gallery img {
+  width: 100%;
+  max-height:1000px;
+  max-width:1000px;
+  height: 100%;
+  align-content: center;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
 }
 
 
@@ -64,15 +102,11 @@ div.Titles{
 
 <div class="Titles">
 
-  <h2 style="color: white;" >Charlie Mason</h2>
-   <h4 style="color: white;">Career Website & Portfolio</h4>
+  <h1 style="color: white;" >Charlie Mason</h1>
+   <h5 style="color: white;">Games Developer Portfolio</h5>
 </div>
-
-
     <nav >
-
       <div class="topnav">
-
         <a class="active" href="index.html">Home</a>
         <a href="Projects.html">Projects</a>
         <a href="contact">Contact</a>
@@ -80,41 +114,58 @@ div.Titles{
       </div >
     </nav>
    </header >
-   <main style="margin-left: 300px;" >
-
+   <main style="margin-left: 500px; margin-right: 500px;" >
+     <main>
+     <h2>Home</h2>
+     <hr>
      <section1>
 
-       <h3>Section 1</h3>
-       <p style="color: black;">This is a paragraph</p>
+       <h3>Welcome!</h3>
+       <p style="color: black; max-height:1000px;
+       max-width:1000px";>Hello im Charlie and welcome to my website,
+       I'm currently in my third year of University studying Games development at NUA (Norwich University of arts).</p>
+       <p style="color: black max-height:1000px;
+       max-width:1000px;">Recently ive been working on group game projecs with other students in different fields
+         but also keeping up with my side projects that introduce me to new coding languages and engines
+         that i can fully customise to my liking and have fun with.</p>
        <br>
      </section1>
-
-
      <section2>
-       <h3>Section 2</h3>
-       <p style="color: black;">This is a paragraph</p>
-       <a href="page2.html">Page 2</a>
-       <br>
+
+       <h3>Current Projects</h3>
+
+   <div class="gallery">
+     <a target="_blank" href="images/Laserbeam.png">
+       <img src="images/Laserbeam.png" alt="Cinque Terre">
+     </a>
+
+   </div>
+
+   <div class="gallery">
+     <a target="_blank" href="images/angryrobot.png">
+       <img src="images/spacecatnip.png" alt="Forest">
+     </a>
+
+   </div>
+
+   <div class="gallery">
+     <a target="_blank" href="images/angryrobot.png">
+       <img src="images/angryrobot.png" alt="Northern Lights">
+     </a>
+
+   </div>
+
+
+
+
      </section2>
-
-
-     <section3>
-       <h3>Section 3</h3>
-       <p style="color: black;">This is a paragraph</p>
-       <br>
-     </section3>
-
-
-     <section4>
-       <h3>Section 4</h3>
-       <p style="color: black;">This is a paragraph</p>
-       <br>
-     </section4>
 
 
    </main>
 
-   <footer>
+   <footer >
+     <p>© Charlie Mason</p>
+     <p>All content and trademarks property of their respective owners.</p>
 
    </footer>
 
