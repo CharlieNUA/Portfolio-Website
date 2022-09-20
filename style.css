@@ -52,8 +52,8 @@ body {
   background-color: #232323;
   text-align: center;
   max-height:1000px;
-  max-width:1000px;
   min-width:600px;
+  bottom: 0;
 
    }
    p{
@@ -67,9 +67,11 @@ body {
      color: white;
      max-height:1000px;
      min-width:600px;
-     max-width:1000px;
+     max-width:10000px;
      text-align: center;
+
    }
+
    .row {
      display: flex;
      max-width: 600px;
