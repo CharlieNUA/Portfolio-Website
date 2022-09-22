@@ -5,6 +5,29 @@ body {
   max-width: auto;
   min-width: 605px;
   font-family: Trebuchet MS;
+  background-color: LightGray;
+}
+header{
+   background-color: #232323;
+}
+h1{
+  color: white;
+}
+h2{
+  color: black;
+}
+h3{
+  color: black;
+}
+h4{
+
+}
+h5{
+  color: white;
+}
+hr{
+   max-width:1000px;
+   min-width:600px;
 }
 .topnav {
   overflow: hidden;
@@ -153,6 +176,7 @@ div.smallgallery img {
      font-family: monospace;
      font-weight: bold;
      font-size: 18px;
+
    }
    ul
    {
