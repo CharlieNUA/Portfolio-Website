@@ -9,6 +9,7 @@
    <meta name="viewport" content="width=device-width, intial-scale =1.0">
    <script src="jquery-2.1.4.js"></script>
    <link rel ="stylesheet" href="style.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <title>Charlie's Website </title>
 
@@ -92,5 +93,13 @@
      <p class="footer text">© Charlie Mason</p>
      <p class="footer text">All content and trademarks property of their respective owners.</p>
    </footer>
+   <div class="loader-wrapper">
+     <span class="loader"><span class="loader-inner"></span></span>
+   </div>
+   <script>
+          $(window).on("load",function(){
+            $(".loader-wrapper").fadeOut("slow");
+          });
+      </script>
   </body>
 </html>

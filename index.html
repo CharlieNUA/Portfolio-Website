@@ -7,6 +7,7 @@
    <meta name="keywords" content="Games Portfolio, University Games Developer, Games Developer, Games Design,
    Indie developer, University Student, Charlie Mason, Charles Mason, Nua, Norwich University of the arts">
    <meta name="viewport" content="width=device-width, intial-scale =1.0">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <link rel ="stylesheet" href="style.css">
 <title>Charlie's Website </title>
 
@@ -112,6 +113,17 @@
      <p class="footer text">© Charlie Mason</p>
      <p class="footer text">All content and trademarks property of their respective owners.</p>
    </footer>
+   <div class="content">
+     <img src="https://picsum.photos/300/300/?random" />
+   </div>
 
+   <div class="loader-wrapper">
+     <span class="loader"><span class="loader-inner"></span></span>
+   </div>
+   <script>
+          $(window).on("load",function(){
+            $(".loader-wrapper").fadeOut("slow");
+          });
+      </script>
   </body>
 </html>
