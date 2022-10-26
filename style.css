@@ -136,6 +136,13 @@ hr{
      min-width:600px;
    }
 
+   object.CV {
+     max-width:1000px;
+     min-width:600px;
+     max-height:900px;
+     min-height:900px;
+   }
+
    div.gallery:hover {
 
    }
