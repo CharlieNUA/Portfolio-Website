@@ -14,7 +14,7 @@ h1{
   color: white;
 }
 h2{
-  color: white;
+  color:black;
 }
 h3{
   color: black;
@@ -137,8 +137,8 @@ hr{
    }
 
    object.CV {
-     max-width:1000px;
-     min-width:500px;
+     max-width:600px;
+     min-width:400px;
      max-height:900px;
      min-height:900px;
    }
