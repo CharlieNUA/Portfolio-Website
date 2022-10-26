@@ -137,10 +137,16 @@ hr{
    }
 
    object.CV {
+
+
      max-width:600px;
-     min-width:400px;
+     min-width:600px;
      max-height:900px;
      min-height:900px;
+
+     if doesnt work change min width to 400px
+
+
    }
 
    div.gallery:hover {
