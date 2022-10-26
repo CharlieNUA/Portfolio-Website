@@ -105,12 +105,12 @@ hr{
    text-align: left;
    font-weight: bold;
    }
+
    hr.CVline{
    color: black;
    max-width:1000px;
    min-width:600px;
    border: 10px solid green;
-
    }
 
 
