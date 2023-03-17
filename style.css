@@ -17,6 +17,11 @@ h1{
       margin-block-end: 0.83em;
           font-weight: bold;
 }
+a.btn-primary{
+  color:  White;
+  background-color: #5F9EA0;
+  border-color: lightgray;
+}
 h2{
   display: block;
   font-size: 1.5em;
