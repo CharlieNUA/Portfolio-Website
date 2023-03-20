@@ -21,7 +21,11 @@ a.btn-primary{
   color:  White;
   background-color: #5F9EA0;
   border-color: lightgray;
+  --bs-btn-border-color: #5F9EA0;
+  --bs-btn-hover-bg: #324345;
+  --bs-btn-hover-border-color: #324345;
 }
+
 h2{
   display: block;
   font-size: 1.5em;
@@ -30,6 +34,11 @@ h2{
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
+}
+p.video{
+  color: black;
+  text-align: center;
+
 }
 
 h3{
@@ -112,6 +121,20 @@ hr{
   bottom: 0;
 
    }
+button.accordion-button{
+  color: black;
+
+}
+.accordion {
+     --bs-accordion-active-color: #324345;
+     --bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgb(13 227 253 / 25%);
+}
+   img.method{
+    width: 20%;
+    height: 20%;
+    align-content: left;
+   }
+
    p{
    color: black;
    max-height:1000px;
@@ -168,16 +191,10 @@ hr{
    }
 
    object.CV {
-
-
      max-width:600px;
      min-width:600px;
      max-height:900px;
      min-height:900px;
-
-     if doesnt work change min width to 400px
-
-
    }
 
    div.gallery img:hover {

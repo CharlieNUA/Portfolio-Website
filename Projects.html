@@ -41,7 +41,7 @@
             <a class="active" href="Projects.html">Projects</a>
             <a href="Contact.html">Contact</a>
             <a href="About.html">About</a>
-            <a href="CV.html">CV<a/>
+            <a href="CV.html">CV</a>
           </div>
         </nav>
 
@@ -74,24 +74,53 @@
       <br>
       <br>
      <p>
-       Originaly the design was a water management game that used a block to reflect water into a goal, however, after working
-       with the Unreals Niagara system I thought this would take too long for the time we had set for our project. So instead this was turned into
-       a laser beam game using Unreals line trace and calculating the reflection on mirror objects. Which I worked on as a solo project to get fully
-       finished and playable with 20 levels.
+       Laser Beam is a top down puzzle game that makes the player use light reflections to hit the targets and progress to the next level, the player also has the added
+       difficultly of obstacles that might get in the way or tricky movements to work around. There are 20 levels in the game that add new puzzles for the player to work
+       on top of this the player has to complete this before the timer runs out.There is a good amount of customisation in this game as the player can now change the color
+       beam to any color of choice.
      </p>
      <p>Engine & Tools: Unreal engine 4, Rider 2019, Github, Photoshop</p>
      <div class="accordion" id="accordionExample" style="background-color: lightgray">
        <div class="accordion-item" style="background-color: lightgray">
-         <h2 class="accordion-header" id="headingOne"  >
-           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background-color: #999999">
+
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background-color: #999999">
              Methodology
            </button>
          </h2>
          <div id="collapseOne" class="accordion-collapse collapse hidden" aria-labelledby="headingOne" data-bs-parent="#accordionExample" style="background-color: DarkGray" >
-           <div class="accordion-body" >
-             <iframe width="420" height="315"
-src="https://www.youtube.com/watch?v=jJ5tcIvv-EE">
-</iframe>
+           <div class="accordion-body">
+            <h4>Laser Beam Overview</h4>
+
+            <p class="video"><iframe width="600" height="338" src="https://www.youtube.com/embed/qspr_SC_ojU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <p>
+                Originaly the design was a water management game that used a block to reflect water into a goal,
+                 however, after working with the Unreals Niagara system I thought this would take too long for the
+                  time we had set for our project. So instead this was turned into a laser beam game using Unreals line
+                   trace and calculating the reflection on mirror objects. Which I worked on as a solo project to get fully
+                finished and playable with 20 levels.
+
+                <br>
+                Laser Beams main focus was to be a puzzle game so alot of the time and research was spent on learning how to make things more difficult and what makes levels harder than
+                others, so i could then have a progressing game that became more and more difficult as the player progresses but also teaches the player new
+                skills that feel rewarding later on.
+                </p>
+                <h4>Basic Mechanics</h4>
+                <img class="method" style="width: 20%" style="height: 20%" style="align-content: left"src="images\Laserbeamworkingpogress2.png" alt="Laser beam working in progress">
+              <br><br>
+               <p>The main movement for the cube is sorted out through a variable which can be effected by pressing either A or D,
+              which will then rotate the cube either clockwise or anti-clockwise depending on what button is pressed. The linetrace is stored inside
+              the cube which will draw a line between the cube and the edges of the map unless the line trace hits a perticular material which in this
+              case its the glass material and that then spawns in another line trace and so forth.</p>
+              </p>
+               <img class="method" style="width: 20%" style="height: 20%" style="align-content: left"src="images\Laserbeamworkingpogress.png" alt="Laser beam working in progress">
+               <br><br>
+               <p>The linetrace can then detect wether its hitting another reflective material in which it will spawn another that has
+               the same behaviour, if the line trace doesn't detect that exact material name it will just draw the black line.This indicates
+               that the line trace has ended and its not hit a target.
+
+               To calculate the angle of the other light reflection the trace will then take into account the direction its coming from and then
+               reflect it on a oppersite angle so if the beam is going down right it will then reflect up right as the picture shows above.</p>
+               </p>
            </div>
          </div>
        </div>
@@ -110,22 +139,53 @@ src="https://www.youtube.com/watch?v=jJ5tcIvv-EE">
        Made for the Global Games Jam 2022, I worked on this with another Developer and an Artist to create
        a third-person shooter classic sci-fi over a couple of days. My main focus on this game was the robot enemies that chase the player around the map
        and also Spent a lot of time on the gravity effect to make all the items and islands float which then would react to the player's movement.
-
      </p>
      <p>Engine & Tools: Unreal engine 4, Visual Studio 2017, Github</p>
 
      <div class="accordion" id="accordionExample"  style="background-color: lightgray">
        <div class="accordion-item"  style="background-color: lightgray">
-         <h2 class="accordion-header" id="headingTwo">
-           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" style="background-color: #999999">
+
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" style="background-color: #999999">
              Methodology
            </button>
          </h2>
          <div id="collapseTwo" class="accordion-collapse collapse hidden" aria-labelledby="headingOne" data-bs-parent="#accordionExample" style="background-color: DarkGray">
            <div class="accordion-body">
-             <iframe width="420" height="315"
-src="https://www.youtube.com/watch?v=h4BxS_ikjTw">
-</iframe>
+            <h4>Space Cat Nip Overview</h4>
+            <p class="video"><iframe width="600" height="338" src="https://www.youtube.com/embed/h4BxS_ikjTw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+               <p>
+                   Space Cat Nip is mainly just a simple platformer with some added extra gravity effects that make it alot of fun for the player to jump
+                   around on floating islands and push rocks around the map.The main movement is done through UE4 character controller so WASD will move
+                   the character and space will make it jump, after aspect we spent a good amount of time on was the UE4 character components air movement as
+                   with this we could then give the player character space like movement so the character would be able to control alot in the air and the
+                   gravity would be very small falling when the character jumps of a rock making it easy to land on small ones.
+                   <br>
+                   Since this was intended for a games jam the time we had to work on it was only two days so the scope had to be quite small, however it still includes
+                   a couple of basic mechanics which makes it fun to play and go through the levels.With the robot enemies that show up later on the game does then have
+                   some small difficulty as the robots can then chase the player down.
+               </p>
+               <h4>AI Behaviour</h4>
+               <img class="method" style="width: 20%" style="height: 20%" style="align-content: left"src="images\spacecatnipAIBehaviour.png" alt="Laser beam working in progress">
+               <br><br>
+               <p>The Robot enemies where a idea we came up with later on in the jam so they didn't have much time for us to develop on however with the UE4 AI behaviour
+               trees we could get a simple patroling and chasing player implemented into the game.So the Robots behaviour will make it find a location at random on
+               the nav mesh its using so for this it would be the islands top face, and then move to it which it then can repeat the process.If the enemy detects the
+               player in its line of sight it can set the players position as the target and then move to that.As we needed a way of dying the player takes damage every
+               so seconds after the player has taken damage for the first time.</p>
+               </p>
+               <h4>Gravity Effects</h4>
+               <img class="method" style="width: 20%" style="height: 20%" style="align-content: left"src="images\GravityMovement.png" alt="Laser beam working in progress">
+               <br><br>
+               <p>For the Gravity effects on objects this was something i spent alot of time on as i saw it as a fun challenge to work on and it would add
+               alot of "Game Feel to the game since its all based around space.So that this could be used on any object i created the base of this through C++ which
+                   definately was much more difficult than all blueprint but it was a good chance to learn about 3d physics as i hadn't had much time to work in this field
+                   before and i found it very intresting.
+                   <br><br>
+                   For this script it sets up the variable that the blueprints then uses to create the line trace between the island and the item below it to calculate the amount to float
+                   and if the player then adds force to the island going downward it can adjust for that.With the variable of hover force made available to change in the editor
+                   it then makes it easier to work with different sizes of objects such as small rocks</p>
+               <img class="method" style="width: 100%" style="height: 100%" style="align-content: left"src="images\SpaceCatNipHoverMovement.png" alt="Laser beam working in progress">
+               </p>
            </div>
          </div>
        </div>
@@ -140,26 +200,45 @@ src="https://www.youtube.com/watch?v=h4BxS_ikjTw">
       <br>
       <br>
        <p>
-         This game was a big group project between a group of people i hadn't met before, my job alongside an indie developer was to create a text-based game in ue4.
-          However, our expectations of what we could get done were a lot more than we could so the game was left unfinished but enough for the project since it was only a game prototype.
-          My main focus on this project was the entire communication between the player and the AI which lets the player talk to different characters and the choices/responses affect the environment around it.
-
-
+         Small stalks is a text based, top down game where you play as a farmer and the way the main plants would grow would be depending
+          on the decisions/dialogue the player conveys to the AI characters when talking to them.The plants can then grow better or worse depending these respones or general chat with characters around the game.My general focus as the only
+          game developer was to work on the dialogue system for the game since it was the main bases of it, it then couldnt be hard coded as it needed to be easy for other people in the team to add lots of dialogue and repsonses easily.
      </p>
      <p>Engine & Tools: Unreal engine 4, Rider 2019, Github, Mixamo</p>
      <div class="accordion" id="accordionExample"  style="background-color: lightgray">
        <div class="accordion-item"  style="background-color: lightgray">
-         <h2 class="accordion-header" id="headingThree">
-           <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree" style="background-color: #999999">
+
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree" style="background-color: #999999">
              Methodology
            </button>
          </h2>
          <div id="collapseThree" class="accordion-collapse collapse hidden" aria-labelledby="headingThree" data-bs-parent="#accordionExample" style="background-color: DarkGray">
            <div class="accordion-body">
-             <iframe width="420" height="315"
-src="https://www.youtube.com/watch?v=jJ5tcIvv-EE">
-</iframe>
-           </div>
+
+             <h4>Small Stalks Playthrough</h4>
+
+             <p class="video"><iframe width="600" height="338" src="https://www.youtube.com/embed/et9JNkLaFmY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+               <p>
+                 This game was created for a second year University project between a large group of students and myself, over a couple of weeks to create a working demo or game.My role alongside an indie developer was to create the dialogue system in ue4.
+                  However, our expectations of what we could get done were a lot higher than realistically possible, which has lead to the game being left unfinished but enough for the university submission since it was only a game prototype that was needed.
+                  My main focus on this project was the entire communication between the player and the AI which lets the player talk to different characters and the choices/responses affect the environment around it.
+
+                 </p>
+                 <h4>Pickup System</h4>
+                 <img class="method" style="width: 75%" style="height: 75%" style="align-content: left"src="images\smallstalkspickup.png" alt="Laser beam working in progress">
+               <br><br>
+                <p>Since the game needed more for the player to be doing than just talking to these characters all the time we implemented a pickup system so that the player can pick up items like a watering can, fill it up and uses it to keep the plants alive, and this would then
+                become a system that the plants have a happiniess and water level which is visible on the screen and the player has to keep running around to make sure these levels don't drop to nothing and the plants then die.</p>
+
+                <p>For this i had to do alot of research into creating pickups that could then be placed into a inventory system and used on a button press, however the one side of the design of the game that worked well in my favour was that the player can only pick up one at a time, Which
+                meant that it was more a case of changing a variable or system on the player so know what they are holding.So each item is then fed through a array on the player that then gets updated every time the player adds to or removes from the inventory. This
+               then could be used for the visual inventory hud on the screen so the player can see what items are picked up. Another idea the gorup came up with was for items to wear away or become unusable so they would have to keep picking up these items, however there wasn't enough time
+             in the project for this.</p>
+               </p>
+                <img class="method" style="width: 85%" style="height: 85%" style="align-content: left"src="images\smallstalkspickupblueprint.png" alt="Laser beam working in progress">
+                <br>
+
+                </p>
          </div>
        </div>
    </div>
@@ -183,24 +262,18 @@ src="https://www.youtube.com/watch?v=jJ5tcIvv-EE">
        This was another project that I ended up working on a lot outside
        of the university to complete and fully flesh it out so it has lots of different levels.
        Not forgetting extra Hud screens and a huge improvement to the player experience by fixing bugs and smoother movement.
-
-
-
-
    </p>
    <p>Engine & Tools: Unreal engine 4, Visual Studio 2019, Asprite</p>
    <div class="accordion" id="accordionExample"  style="background-color: lightgray">
      <div class="accordion-item"  style="background-color: lightgray">
-       <h2 class="accordion-header" id="headingFour">
-         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour" style="background-color: #999999">
+         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour" style="background-color: #999999">
            Methodology
          </button>
        </h2>
        <div id="collapseFour" class="accordion-collapse collapse hidden" aria-labelledby="headingFour" data-bs-parent="#accordionExample" style="background-color: DarkGray">
          <div class="accordion-body">
-           <iframe width="420" height="315"
-src="https://www.youtube.com/watch?v=jJ5tcIvv-EE">
-</iframe>
+          <h4>Mega Magnet Overview</h4>
+          <p class="video"><iframe width="600" height="338" src="https://www.youtube.com/embed/jJ5tcIvv-EE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
          </div>
        </div>
      </div>
@@ -214,8 +287,6 @@ src="https://www.youtube.com/watch?v=jJ5tcIvv-EE">
    </a>
    <h3>Leaf Worm</h3>
    <a class="btn btn-primary" href="https://charliemason01.itch.io/leaf-worm" target="_blank" role="button">Download Page</a>
-
-
       <br>
       <br>
      <p>
@@ -228,19 +299,15 @@ src="https://www.youtube.com/watch?v=jJ5tcIvv-EE">
    <p>Engine & Tools: Unity, Rider 2019, Github, Aseprite</p>
    <div class="accordion" id="accordionExample"  style="background-color: lightgray">
      <div class="accordion-item"  style="background-color: lightgray">
-       <h2 class="accordion-header" id="headingFive">
-         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive" style="background-color: #999999">
+
+         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive" style="background-color: #999999">
            Methodology
          </button>
-       </h2>
        <div id="collapseFive" class="accordion-collapse collapse hidden" aria-labelledby="headingFive" data-bs-parent="#accordionExample" style="background-color: DarkGray">
          <div class="accordion-body">
-        <p>Leaf Worm Overview</p>
-           <iframe width="420" height="315"
-src="https://www.youtube.com/watch?v=pXjggiVS7ho">
-</iframe>
-<p>Leaf Worm Overview</p>
-
+        <h4>Leaf Worm Overview</h4>
+        <p class="video"><iframe width="600" height="338" src="https://www.youtube.com/embed/pXjggiVS7ho" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+      </div>
          </div>
        </div>
      </div>
@@ -269,11 +336,9 @@ src="https://www.youtube.com/watch?v=pXjggiVS7ho">
    <p>Engine & Tools: Unity, Rider 2019, Github, Mixamo, Photoshop</p>
    <div class="accordion" id="accordionExample"  style="background-color: lightgray">
      <div class="accordion-item"  style="background-color: lightgray">
-       <h2 class="accordion-header" id="headingSix">
-         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix" style="background-color: #999999" >
+         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix" style="background-color: #999999">
            Methodology
          </button>
-       </h2>
        <div id="collapseSix" class="accordion-collapse collapse hidden" aria-labelledby="headingSix" data-bs-parent="#accordionExample" style="background-color: DarkGray">
          <div class="accordion-body" >
            <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
