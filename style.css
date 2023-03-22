@@ -24,6 +24,7 @@ a.btn-primary{
   --bs-btn-border-color: #5F9EA0;
   --bs-btn-hover-bg: #324345;
   --bs-btn-hover-border-color: #324345;
+
 }
 
 h2{
@@ -38,6 +39,7 @@ h2{
 p.video{
   color: black;
   text-align: center;
+
 
 }
 
@@ -90,6 +92,7 @@ hr{
      padding: 8px 18px;
      text-decoration: none;
      font-size: 14px;
+     border-radius: 3px;
    }
 
    .topnav a:hover {
@@ -123,6 +126,7 @@ hr{
    }
 button.accordion-button{
   color: black;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.01), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
 
 }
 .accordion {
@@ -133,6 +137,11 @@ button.accordion-button{
     width: 20%;
     height: 20%;
     align-content: left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 6px 20px 0 rgba(0, 0, 0, 0.79);
+   }
+   iframe{
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.03), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+     border-radius: 1.5px;
    }
 
    p{
@@ -206,12 +215,16 @@ filter:opacity(40%) blur(1px);
   min-width:600px;
   height: 100%;
   align-content: center;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
 }
 div.smallgallery {
   margin: 5px;
   border: 1px solid #ccc;
   display: inline-block;
   width: 300px;
+
+
 }
 
 div.smallgallery:hover {
@@ -221,6 +234,8 @@ div.smallgallery:hover {
 div.smallgallery img {
   width: 100%;
   height: auto;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
    div.desc {
@@ -250,6 +265,8 @@ div.smallgallery img {
    div.previewgallery img {
      width: 100%;
      height: auto;
+     border-radius: 2px;
+     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
    }
    div.Gamesrecently{
      font-stretch: expanded;
