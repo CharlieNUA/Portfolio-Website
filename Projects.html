@@ -54,16 +54,235 @@
 
      <section1>
 
-       <h3>University Work</h3>
+       <h3>Game Projects</h3>
        <p>
-       Over the two years of university i have had the chance to work on lots of different games that
-       have improved my game designing techniques and coding knowledge massively. Some of these projects are not finished however
-       they have been really fun to work on. As well as meeting new people in the industry along the way and strengthing
-       my experience in games development.
+         Over the three years of my university course at NUA Games Development i have had many opportunities to create all types of games, whether it's coursework or participating in game jams. Over this time I have grown the skills and knowledge needed to create
+         games using various engines and coding languages. Some of these projects are not as polished and complete as I would like them to be however they have been great fun to work on and the experience gained from doing so will help me become a part of the games industry.
        </p>
        <br>
      </section1>
      <section2>
+
+        <div class="gallery">
+          <a target="_blank" href="images/towerdefence.png">
+            <img src="images/towerdefence.png" alt="Tower Defence Cover">
+          </a>
+          <br><br>
+            <p>
+              The soon to be titled tower defense project is a top down 3d fantasy tower defense game where the player has to fight through various waves of enemies to complete the level and unlock more. To battle, these enemies the player is equipped with an arsenal of
+              magical and mysterious characters that can destroy all kinds of monsters that come their way. With the vast amount of enemy types, the player has to strategise with the placement of their turrets and what ones to place on that slot. So that the player can improve on their defences even more the game includes
+              a multi-level upgrade system that can help take down the most powerful enemies.
+       </p>
+          <p>Engine & Tools: Unity, Rider 2019, C#, Github, Mixamo, Photoshop</p>
+          <div class="accordion" id="accordionExample"  style="background-color: lightgray">
+            <div class="accordion-item"  style="background-color: lightgray">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix" style="background-color: #999999">
+                  Methodology
+                </button>
+              <div id="collapseSix" class="accordion-collapse collapse hidden" aria-labelledby="headingSix" data-bs-parent="#accordionExample" style="background-color: DarkGray">
+                <div class="accordion-body" >
+                  <h4>Tower Defense Current Development</h4>
+                  <p class="video"><iframe width="600" height="338" src="https://www.youtube.com/embed/-eTRpS96dfs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+                  <p>
+                    This tower defense game is currently my main focus of work, in my last year of university I have been
+                      given the chance to work on a game for a good chunk of my last term which gives me well enough time to
+                       finish the game, polish it and publish it to a game's website such as steam.
+
+                  </p>
+                  <p>
+                    This is my first attempt at building a 3d game using Unity as I usually use Unreal Engine 4 so
+                    the development of this game has been much more challenging to learn an engine and editor while creating a game but has massively improved my skills within Unity and a better knowledge of different game development engines.
+
+                  <h4>Turret Targetting</h4>
+                  <a target="_blank" href="images\towerdefencespawner.PNG">
+                  <img class="method" style="width: 70%" style="height: 70%" src="images\towerdefenceturret.PNG" alt="Tower Defence working in progress">
+                </a>
+                  <br>
+                  <p>
+                    Since there needed to be a main script that all the turrets used or could branch off the best way was to have all the basic targetting and firing functions all together so it could then be called
+                    later on whether it was firing a AOE or multiple projectiles. For this, the turret will try to find any enemy with the tag of the enemy and make it a target, which then can be used to rotate the turret
+                    towards that enemy making it look like it's aiming at that targetted enemy.</p>
+
+                    <p>This update enemy function is invoked every zero point five seconds from the start of the turret being spawned so it can then
+                    update the target while its already got a target for this targeting system it needed to focus on the closest target to that turret, however this could be a feature that could be changed later on to
+                    let the player choose what enemy to target as this would add more strategic targetting of enemies. To make sure that the turrets don't shoot all the enemies on the screen there is an added check to see if that targetted enemy is
+                    in the turrets range which is a variable that can be changed on each turret to match their playstyle.
+
+                    </p>
+                    <h4>Spawner Wave System</h4>
+                  <a target="_blank" href="images\towerdefencespawner.PNG">
+                  <img class="method" style="width: 60%" style="height: 60%" src="images\towerdefencespawner.PNG" alt="Tower Defence working in progress">
+                </a>
+                  <br>
+                  <p>The wave system for this game needed to be quite complex so that it could spawn however many enemies, with that selected prefab so that each round would then be different or it can progress through difficulty. This lead me to use an IEnumerator as it
+                  can be called every chosen amount of seconds which for this would be the round countdown so as soon as the countdown ends the round begins. In this function, it will go along the array of the wave index and for each item, in the array, it will spawn a certain amount of enemies.
+                  The actual function to spawn the enemy is simply just getting to that point needs to go through the checks to see if it can, then what one to spawn. This script can then be attached to the spawner in the level which then makes the enemies spawn from that location on the map, making it very easy to
+                  change this in future levels.
+
+                </p>
+
+                  <h4>Enemy Behaviour</h4>
+                  <a target="_blank" href="images\towerdefencespawner.PNG">
+                  <img class="method" style="width: 50%" style="height: 50%" src="images\towerdefenceenemymovement.png" alt="Tower Defence working in progress">
+                </a>
+                  <br>
+                  <p>
+                    For the enemies to walk along the path towards their goal they needed a movement script however this needed to be changed instead of a simple moveto, so that the enemy's route could be changed for each level or pretty much made for each levels map.
+                    To solve this problem I used waypoints in a array around the map that the enemy could go towards until they have reached it and then find a new one to go towards repeating this process until there aren't any more waypoints left in the array. To do this the
+                   waypoints are all added to a array at the beginning of the game so it doesn't need to be set each time to a particular number, which the enemy can then go to each object in that array, marking off the one it has been to. If there are no more points for the
+                   enemy to walk along it will then end its movement path and remove a life from the player.
+
+
+                   <p>One of the small additions i added to the movement for the enemy was different changing speeds so the maximum and minimum speeds can be set for each enemy and it will pick a number between the two
+                   and that variable will become the speed of that enemy, I found this helped make the enemies more realistic and not like walking drones with the same movement speed.</p>
+
+                  </p>
+              </div>
+            </div>
+        </div>
+        </div>
+
+         <div class="gallery">
+           <a target="_blank" href="images/leafwormbanner.png">
+             <img src="images/leafwormbanner.png" alt="Leaf Worm Cover">
+           </a>
+          <br><br>
+           <a class="btn btn-primary" href="https://charliemason01.itch.io/leaf-worm" target="_blank" role="button">Download Page</a>
+              <br>
+              <br>
+             <p>
+               Leaf Worm is a 2D side scroller game where the player has to destroy all the underground seeds to complete the level. In this game, the player controls a green leaf worm that buries through the underground to find all the seeds and consume them.
+               Each time the game is played the seeds are also in completely random places around the map and will have a random amount too, so each time a player plays through the game it will be a different experience and can't remember/strategise where to go to find these seeds.
+
+           </p>
+           <p>Engine & Tools: Unity, Rider 2019, C#, Github, Aseprite</p>
+           <div class="accordion" id="accordionExample"  style="background-color: lightgray">
+             <div class="accordion-item"  style="background-color: lightgray">
+
+                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive" style="background-color: #999999">
+                   Methodology
+                 </button>
+               <div id="collapseFive" class="accordion-collapse collapse hidden" aria-labelledby="headingFive" data-bs-parent="#accordionExample" style="background-color: DarkGray">
+                 <div class="accordion-body">
+                <h4>Leaf Worm Overview</h4>
+                <p class="video"><iframe width="600" height="338" src="https://www.youtube.com/embed/pXjggiVS7ho" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
+                <p>
+                  Leaf worm was a game created for the Global Games Jam 2023 just by myself and the addition of free assets
+                   I could find online over two days. For that particular game's jam, I decided to compete by myself to see what I could do
+                   in this short period and not have to rely on other members of a team. This was my first experience making a 2d game in unity which I think was quite successful.
+                   The game is quite underdeveloped however it is playable and each time it is played the game will be different, there isn’t
+                   much more difficulty since it's more about collecting items at the player's pace but it's a fun little game I'm happy I could work on and create.
+
+                </p>
+                <h4>Worm Movement</h4>
+                <a target="_blank" href="images\leafwormdevelopment.png">
+                <img class="method" style="width: 90%" style="height: 90%" style="align-content: left"src="images\leafwormdevelopment.png" alt="Leaf Worm working in progress">
+              </a>
+                <br>
+                <p>The worm makes use of basic 2d unity movment that uses W, A, S, D to move in all directions by changing a variable that affects the player's location either positive or negative to go in that direction. However, for the actual worm body
+                has its own distinctive movement wiggle to create the effect of a worm digging through the ground. I researched into different ways of doing this and found examples that worked for tentacles so this would also work in this situation and could be changed a lot
+                to suit the behaviours of a worm such as the amount the body wiggles by itself. For the worm body, it uses a line renderer that then creates lots of different
+                segments along the body that can be moved which then means it will affect the others if one moves. So this updates with the player's movement and reacts to it making it feel like the body is still in the ground just following the head.
+
+              </p>
+              <p>
+                To make the worm body look more like it has worm movement it needed to wiggle when moving across the screen. This means that every so often the body will just wiggle which appears when quickly enough like the body is wiggling back and forth. This then also works because the segments will
+                take the information from the one in front of it so it creates the effect of the wiggle going down the body. To apply this force it creates a Vector 3 and applies smooth damp to each segment, which then uses multipliers to change the speed or wiggle amount.
+
+              </p>
+                </p>
+                <h4>Seed Spawning</h4>
+                <a target="_blank" href="images\leafwormspawner.PNG">
+                <img class="method" style="width: 40%" style="height: 40%" style="align-content: left"src="images\leafwormspawner.PNG" alt="Leaf Worm working in progress">
+              </a>
+                <br>
+                <p>
+                  To spawn in the seeds created a seed prefab that just had a line trace going upward as i wanted the seeds to still spawn in roots when its spawned in and I found it then also helps the player
+                  when they are trying to find the seed it makes it less tedious to check each corner. So for the spawning of these prefabs I could then take an area and at the start of the level just spawn a certain amount of that prefab anywhere on that item, so in this case
+                it was the background map that could just add mesh so that the seeds won't spawn outside the camera view, but with this spawner, it can be changed in the editor how many to spawn in or a range between two points.
+</p>
+              </div>
+                 </div>
+               </div>
+             </div>
+         </div>
+
+         </div>
+
+         <div class="gallery">
+           <a target="_blank" href="images/plant-game.png">
+             <img src="images/plant-game.png" alt="Plant Game Cover">
+           </a>
+           <br><br>
+            <a class="btn btn-primary" href="https://charlesmason.nuacomputerscience.co.uk/2022/03/23/new-group-project/" target="_blank" role="button">Documentation </a>
+            <br>
+            <br>
+             <p>
+               Small stalks is a text based, top down game where you play as a farmer that needs to grow plants and keep them alive. The plant's health and well-being depend on
+                the decisions/dialogue the player conveys to the AI characters when talking to them. The plants can then grow better or worse depending on these responses or general chat with characters around the game. But not also forgetting
+                the farmer's duties of keeping the plants alive physically by grabbing tools and equipment to water plants or replace soil.
+
+           </p>
+           <p>Engine & Tools: Unreal engine 4, C++, Blueprint, Rider 2019, Github, Mixamo</p>
+           <div class="accordion" id="accordionExample"  style="background-color: lightgray">
+             <div class="accordion-item"  style="background-color: lightgray">
+
+                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree" style="background-color: #999999">
+                   Methodology
+                 </button>
+               </h2>
+               <div id="collapseThree" class="accordion-collapse collapse hidden" aria-labelledby="headingThree" data-bs-parent="#accordionExample" style="background-color: DarkGray">
+                 <div class="accordion-body">
+
+                   <h4>Small Stalks Playthrough</h4>
+
+                   <p class="video"><iframe width="600" height="338" src="https://www.youtube.com/embed/et9JNkLaFmY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                     <p>
+                       This game was created for a second year University project between a large group of students and myself, over a couple of weeks to create a working demo or game. My role alongside an indie developer was to create the dialogue system in ue4.
+                        However, our expectations of what we could get done were a lot higher than realistically possible, which has to lead to the game being left unfinished but enough for the university submission since it was only a game prototype that was needed.
+                        My main focus on this project was the entire communication between the player and the AI which lets the player talk to different characters and the choices/responses affect the environment around it.
+
+
+
+                       </p>
+                       <h4>Pickup & Inventory System</h4>
+                       <a target="_blank" href="images\smallstalkspickup.png">
+                       <img class="method" style="width: 85%" style="height: 85%" src="images\smallstalkspickup.png" alt="Laser beam working in progress">
+                     </a>
+                     <br>
+                      <p>Since the game needed more for the player to be doing than just talking to these characters all the time we implemented a pickup system so that the player can pick up items like a watering can, fill it up and uses it to keep the plants alive, and this would then
+                      become a system that the plants have a happiness and water level which is visible on the screen and the player has to keep running around to make sure these levels don't drop to nothing and the plants then die.
+</p>
+
+                      <p>For this i had to do alot of research into creating pickups that could then be placed into a inventory system and used on a button press, however, the one side of the design of the game that worked well in my favour was that the player can only pick up one at a time, Which
+                      meant that it was more a case of changing a variable or system on the player so know what they are holding. So each item is then fed through a array on the player that then gets updated every time the player adds to or removes from the inventory. This
+                     then could be used for the visual inventory hud on the screen so the player can see what items are picked up. Another idea the gorup came up with was for items to wear away or become unusable so they would have to keep picking up these items, however there wasn't enough time
+                   in the project for this.
+</p>
+                     </p>
+                     <a target="_blank" href="images\smallstalkspickupblueprint.png">
+                      <img class="method" style="width: 100%" style="height: 100%" src="images\smallstalkspickupblueprint.png" alt="Laser beam working in progress">
+                    </a>
+                      <br>
+                      <h4>Story Design</h4>
+                      <p>As this game was putting the player through these conversations we then had to map out what each character would say at each point and then change that alongside what the player is responding with. To simplify and plan this out we used
+                      an online diagram page that would make things a lot easier and handy to have when working on the game and developing dialogue. This also helped some of the asset members of the team as the character responses could help them create a persona for
+                    the characters they would be designing. When working through these small interactions between each character and player we found it would feel more responsive if the player had responded in a good or bad way which we found worked if these options
+                    would add or subtract stats when the player talks to the AI.
+</p>
+                    <a target="_blank" href="images\smallstorksdiagram.png">
+                    <img class="method" style="width: 80%" style="height: 80%" src="images\smallstorksdiagram.png" alt="Laser beam working in progress">
+                  </a>
+                     </p>
+
+                      </p>
+               </div>
+             </div>
+         </div>
+
+         </div>
+
+       </div>
    <div class="gallery">
      <a target="_blank" href="images\LaserBeam.png">
        <img src="images\LaserBeam.png" alt="Laser beam cover">
@@ -75,8 +294,9 @@
       <br>
      <p>
        Laser Beam is a top down puzzle game that makes the player use light reflections to destroy all the targets and progress to the next level, the player also has the added
-       difficultly of obstacles that might get in the way or tricky movements to work around which have greater difficulty later down the line. In total there are 20 levels in the game that add new and different puzzles for the player to get stuck into,
-       on top of this the player has to battle the time to destroy all the blocks before the time runs out.The beam itself is also able to change to any color the player wants to impliment a better feel of customization.
+       difficulty of obstacles that might get in the way or tricky movements to work around which have greater difficulty later down the line. In total there are 20 levels in the game that add new and different puzzles for the player to get stuck into,
+       on top of this the player has to battle the time to destroy all the blocks before the time runs out. The beam itself is also able to change to any colour the player wants to implement a better feel of customization.
+
      </p>
      <p>Engine & Tools: Unreal engine 4, C++, Blueprint, Rider 2019, Github, Photoshop</p>
      <div class="accordion" id="accordionExample" style="background-color: lightgray">
@@ -100,8 +320,9 @@
 
                 <br>
                 The main focus was to be a puzzle game so alot of the time and research was spent on learning how to make things more difficult and what makes levels harder than
-                others, so i could then have a progressing game that became more and more difficult as the player progresses but also teaches the player new
+                others, so I could then have a progressing game that became more and more difficult as the player progresses but also teaches the player new
                 skills that feel rewarding later on.
+
                 </p>
                 <h4>Basic Mechanics</h4>
                 <a target="_blank" href="images\Laserbeamworkingpogress2.png">
@@ -109,20 +330,22 @@
               </a>
               <br>
                <p>The main movement for the cube is sorted out through a variable which can be effected by pressing either A or D,
-              which will then rotate the cube either clockwise or anti-clockwise depending on what button is pressed. The linetrace is stored inside
-              the cube which will draw a line between the cube and the edges of the map unless the line trace hits a perticular material which in this
-              case its the glass material and that then spawns in another line trace and so forth.</p>
+              which will then rotate the cube either clockwise or anti-clockwise depending on what button is pressed. The line trace is stored inside
+              the cube which will draw a line between the cube and the edges of the map unless the line trace hits a particular material which in this
+              case its the glass material and that then spawns in another line trace and so forth.
+</p>
               </p>
               <a target="_blank" href="images\Laserbeamworkingpogress.png">
                <img class="method" style="width: 65%" style="height: 65%" src="images\Laserbeamworkingpogress.png" alt="Laser beam working in progress">
              </a>
                <br>
                <p>The linetrace can then detect wether its hitting another reflective material in which it will spawn another that has
-               the same behaviour, if the line trace doesn't detect that exact material name it will just draw the black line.This indicates
-               that the line trace has ended and its not hit a target.
+               the same behaviour if the line trace doesn't detect that exact material name it will just draw the black line. This indicates
+               that the line trace has ended and it's not hit a target.
 
-               To calculate the angle of the other light reflection the trace will then take into account the direction its coming from and then
-               reflect it on a oppersite angle so if the beam is going down right it will then reflect up right as the picture shows above.</p>
+               To calculate the angle of the other light reflection the trace will then take into account the direction it's coming from and then
+               reflect it on an oppersite angle so if the beam is going down right it will then reflect up right as the picture shows above.
+</p>
                </p>
            </div>
          </div>
@@ -140,7 +363,8 @@
       <br>
      <p>
        Space Cat Nip is a third person sci-fi shooter where the player has to destroy robots in space with laser pistols, while also trying to navigate through space jumping on floating islands trying to find the beloved cat nip and reach the next level.
-       The game features lots of space like movement that makes the player feel as if there floating around in space with fun objects to push around the map.
+        The game features lots of space-like movement that makes the player feel as if they're floating around in space with fun objects to push around the map.
+
      </p>
      <p>Engine & Tools: Unreal engine 4, C++, Blueprint, Visual Studio 2017, Github</p>
 
@@ -157,18 +381,21 @@
             <p class="video"><iframe width="600" height="338" src="https://www.youtube.com/embed/h4BxS_ikjTw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
                <p>
                  Space Cat Nip was made for the Global Games Jam 2022, I worked on this with another Developer and an Artist to create
-                 a third-person shooter classic sci-fi over a couple of days. My main focus on this game was the robot enemies that chase the player around the map
+                 a third-person shooter classic sci-fi over a couple of days. My main focus in this game was the robot enemies that chase the player around the map
                  and also Spent a lot of time on the gravity effect to make all the items and islands float which then would react to the player's movement.
 
-                   Its mainly just a simple platformer with some added extra gravity effects that make it alot of fun for the player to jump
-                   around on floating islands and push rocks around the map.The main movement is done through UE4 character controller so WASD will move
+                   It's mainly just a simple platformer with some added extra gravity effects that make it a lot of fun for the player to jump
+                   around floating islands and push rocks around the map.The main movement is done through UE4 character controller so WASD will move
                    the character and space will make it jump, after aspect we spent a good amount of time on was the UE4 character components air movement as
                    with this we could then give the player character space like movement so the character would be able to control alot in the air and the
                    gravity would be very small falling when the character jumps of a rock making it easy to land on small ones.
+
                    <br>
-                   Since this was intended for a games jam the time we had to work on it was only two days so the scope had to be quite small, however it still includes
-                   a couple of basic mechanics which makes it fun to play and go through the levels.With the robot enemies that show up later on the game does then have
-                   some small difficulty as the robots can then chase the player down.
+                   Since this was intended for a games jam the time we had to work on it was only two days so the scope had to be quite small, however, it still includes
+                   a couple of basic mechanics which makes it fun to play and go through the levels. With the robot enemies that show up later on the game does then have
+                   some small difficulties as the robots can then chase the player down.
+
+
                </p>
                <h4>AI Behaviour</h4>
                <a target="_blank" href="images\spacecatnipAIBehaviour.PNG">
@@ -187,13 +414,15 @@
              </a>
                <br><br>
                <p>For the Gravity effects on objects this was something i spent alot of time on as i saw it as a fun challenge to work on and it would add
-               alot of "Game Feel to the game since its all based around space.So that this could be used on any object i created the base of this through C++ which
-                   definately was much more difficult than all blueprint but it was a good chance to learn about 3d physics as i hadn't had much time to work in this field
-                   before and i found it very intresting.
+               a lot of "Game Feel to the game since it's all based around space. So that this could be used on any object I created the base of this through C++ which
+                   was much more difficult than all blueprints but it was a good chance to learn about 3d physics as I hadn't had much time to work in this field
+                   before and I found it very interesting.
+
                    <br><br>
                    For this script it sets up the variable that the blueprints then uses to create the line trace between the island and the item below it to calculate the amount to float
-                   and if the player then adds force to the island going downward it can adjust for that.With the variable of hover force made available to change in the editor
-                   it then makes it easier to work with different sizes of objects such as small rocks</p>
+                    and if the player then adds force to the island going downward it can adjust for that. With the variable of hover force made available to change in the editor,
+                    it then makes it easier to work with different sizes of objects such as small rocks.
+</p>
                    <a target="_blank" href="images\SpaceCatNipHoverMovement.PNG">
                <img class="method" style="width: 100%" style="height: 100%" src="images\SpaceCatNipHoverMovement.PNG" alt="Laser beam working in progress">
              </a>
@@ -203,75 +432,7 @@
        </div>
    </div>
 </div>
-   <div class="gallery">
-     <a target="_blank" href="images/plant-game.png">
-       <img src="images/plant-game.png" alt="Plant Game Cover">
-     </a>
-     <br><br>
-      <a class="btn btn-primary" href="https://charlesmason.nuacomputerscience.co.uk/2022/03/23/new-group-project/" target="_blank" role="button">Documentation </a>
-      <br>
-      <br>
-       <p>
-         Small stalks is a text based, top down game where you play as a farmer that needs to grow plants and keep them alive.The plants health and wellbeing depends on
-          the decisions/dialogue the player conveys to the AI characters when talking to them.The plants can then grow better or worse depending these respones or general chat with characters around the game.But not also forgetting
-          the farmer duties of keeping the plants alive physicaly by grabbing tools and equipment to water plants or replace soil.
-     </p>
-     <p>Engine & Tools: Unreal engine 4, C++, Blueprint, Rider 2019, Github, Mixamo</p>
-     <div class="accordion" id="accordionExample"  style="background-color: lightgray">
-       <div class="accordion-item"  style="background-color: lightgray">
 
-           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree" style="background-color: #999999">
-             Methodology
-           </button>
-         </h2>
-         <div id="collapseThree" class="accordion-collapse collapse hidden" aria-labelledby="headingThree" data-bs-parent="#accordionExample" style="background-color: DarkGray">
-           <div class="accordion-body">
-
-             <h4>Small Stalks Playthrough</h4>
-
-             <p class="video"><iframe width="600" height="338" src="https://www.youtube.com/embed/et9JNkLaFmY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-               <p>
-                 This game was created for a second year University project between a large group of students and myself, over a couple of weeks to create a working demo or game.My role alongside an indie developer was to create the dialogue system in ue4.
-                  However, our expectations of what we could get done were a lot higher than realistically possible, which has lead to the game being left unfinished but enough for the university submission since it was only a game prototype that was needed.
-                  My main focus on this project was the entire communication between the player and the AI which lets the player talk to different characters and the choices/responses affect the environment around it.
-
-
-                 </p>
-                 <h4>Pickup & Inventory System</h4>
-                 <a target="_blank" href="images\smallstalkspickup.png">
-                 <img class="method" style="width: 85%" style="height: 85%" src="images\smallstalkspickup.png" alt="Laser beam working in progress">
-               </a>
-               <br>
-                <p>Since the game needed more for the player to be doing than just talking to these characters all the time we implemented a pickup system so that the player can pick up items like a watering can, fill it up and uses it to keep the plants alive, and this would then
-                become a system that the plants have a happiniess and water level which is visible on the screen and the player has to keep running around to make sure these levels don't drop to nothing and the plants then die.</p>
-
-                <p>For this i had to do alot of research into creating pickups that could then be placed into a inventory system and used on a button press, however the one side of the design of the game that worked well in my favour was that the player can only pick up one at a time, Which
-                meant that it was more a case of changing a variable or system on the player so know what they are holding.So each item is then fed through a array on the player that then gets updated every time the player adds to or removes from the inventory. This
-               then could be used for the visual inventory hud on the screen so the player can see what items are picked up. Another idea the gorup came up with was for items to wear away or become unusable so they would have to keep picking up these items, however there wasn't enough time
-             in the project for this.</p>
-               </p>
-               <a target="_blank" href="images\smallstalkspickupblueprint.png">
-                <img class="method" style="width: 100%" style="height: 100%" src="images\smallstalkspickupblueprint.png" alt="Laser beam working in progress">
-              </a>
-                <br>
-                <h4>Story Design</h4>
-                <p>As this game was putting the player through these conversations we then had to map out what each character would say at each point and then change that along side what the player is repsonding with.To simplify and plan this out we used
-                a online diagram page that would make things alot easier and handy to have when working on the game when developing dialogue.This also helped some of the asset members of the team as the character responses could help them create a persona for
-              the characters they would be designing.When working through these small interactions between each character and player we found it would feel more repsonsive if the player had responded in a good or bad way which we found worked if these options
-              would add or subtract stats when the player talks to the AI.</p>
-              <a target="_blank" href="images\smallstorksdiagram.png">
-              <img class="method" style="width: 80%" style="height: 80%" src="images\smallstorksdiagram.png" alt="Laser beam working in progress">
-            </a>
-               </p>
-
-                </p>
-         </div>
-       </div>
-   </div>
-
-   </div>
-
- </div>
 
  <div class="gallery">
    <a target="_blank" href="images/megamagnet.png">
@@ -283,9 +444,10 @@
       <br>
       <br>
      <p>
-       Mega Magnet is a top down puzzle game that focuses on pushing the player to improve there skills of puzzle solving, by having to complete levels with less time remaining and evil robots that will try to slow you down.The objective is to find the correct block within the time limit and
-       place it on the loading bay to finish the level.However its quite difficult as single time the game is played there are random blocks spawned in the map so there isn't any way to know which is the correct or the false blocks, which also gets added to
-       so there is more and more blocks as the player progresses.
+       Mega Magnet is a top down puzzle game that focuses on pushing the player to improve there skills of puzzle solving, by having to complete levels with less time remaining and evil robots that will try to slow you down. The objective is to find the correct block within the time limit and
+        place it on the loading bay to finish the level. However, it's quite difficult as the single time the game is played there are random blocks spawned in the map so there isn't any way to know which is the correct or the false blocks, which also gets added to
+        so there are more and more blocks as the player progresses.
+
    </p>
    <p>Engine & Tools: Unreal engine 4, Blueprint, Visual Studio 2019, Asprite</p>
    <div class="accordion" id="accordionExample"  style="background-color: lightgray">
@@ -300,20 +462,22 @@
           <p class="video"><iframe width="600" height="338" src="https://www.youtube.com/embed/jJ5tcIvv-EE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
           <p>
             This game was planned and built for my final project at the end of my first year at university which could then show off what I had picked up along the way.
-            The focus of this project was create a puzzle game that could be very challenging for the player, so this lead me down the route of randomly generating the blocks around the level so
+            The focus of this project was to create a puzzle game that could be very challenging for the player, so this lead me down the route of randomly generating the blocks around the level so
             every single round will be different to the last and unpredictable for the player to work around.
             This was another project that I ended up working on a lot outside
-            of the university to complete and fully flesh it out so it has lots of different levels and was alot more rewarding to play.
+            of the university to complete and fully flesh it out so it has lots of different levels and was a lot more rewarding to play.
+
           </p>
           <h4>Design</h4>
           <a target="_blank" href="images\megamagnetdevelopment.png">
           <img class="method" style="width: 75%" style="height: 75%" style="align-content: left"src="images\megamagnetdevelopment.png" alt="Mega Magnet working in progress">
         </a>
           <br>
-          <p>The base design for this game is quite simple as everything needs to be on the screen at all times so it leaves the focus on the blocks instead of working around the level, which lead me to use a top down camera but adjusted to a angle
-          so that the player can still see the sides of the characters and objects, similar to a orthographic camera.</p><p>The walls are added to the level just to make the player work more for each attempt to find the correct block, but with the
-          problem of having walls meant i couldnt just spawn in blocks anywhere on a mesh which would be the simple way of doing it. Instead i had to use empty blocks which i could then put manualy move around the level and then with the
-          blueprint script it could possibly spawn in that block or choose a different location but i wouldnt then have the problem of it spawning inside the walls.</p>
+          <p>The base design for this game is quite simple as everything needs to be on the screen at all times so it leaves the focus on the blocks instead of working around the level, which lead me to use a top-down camera but adjusted to an angle
+          so that the player can still see the sides of the characters and objects, similar to an orthographic camera.</p><p>The walls are added to the level just to make the player work more for each attempt to find the correct block, but the
+          problem of having walls meant I couldn't just spawn in blocks anywhere on a mesh which would be the simple way of doing it. Instead, I had to use empty blocks which I could then put manually move around the level and then with the
+          blueprint script it could spawn in that block or choose a different location but i wouldnt then have the problem of it spawning inside the walls.
+</p>
           </p>
           <h4>Randomly Generating Blocks</h4>
           <a target="_blank" href="megamagnetdevelopmentblocks.png">
@@ -326,8 +490,9 @@
             to spawn in a block at that child.For this level i found that one real block and five other fake blocks was enough to have around one or two real blocks in the level, the random integer for this goes to six so that
             there is a one in six chance that there wont be a block spawned on that child making it look like they move for each level.</p>
             <p>
-              With this same blueprint script idea i could then replicate this for the dropping bay so that the dropping bay would then move to a different spot each time the level is played, to make this work i added four different target points around
+              With this same blueprint script idea i could then replicate this for the dropping bay so that the dropping bay would then move to a different spot each time the level is played, to make this work I added four different target points around
               each corner of the level, created a array from it and since the game only needs one drop bay it could then just spawn one and not have to be possible on every single child.
+
             </p>
             <a target="_blank" href="images\megamagnetdevelopmentlevel.png">
           <img class="method" style="width: 78%" style="height: 78%" style="align-content: left"src="images\megamagnetdevelopmentlevel.png" alt="Mega Magnet working in progress">
@@ -340,152 +505,9 @@
 
  </div>
 
- <div class="gallery">
-   <a target="_blank" href="images/leafwormbanner.png">
-     <img src="images/leafwormbanner.png" alt="Leaf Worm Cover">
-   </a>
-  <br><br>
-   <a class="btn btn-primary" href="https://charliemason01.itch.io/leaf-worm" target="_blank" role="button">Download Page</a>
-      <br>
-      <br>
-     <p>
-       Leaf Worm is a 2D side scroller game where the player has to destroy all the underground seeds to complete the level.In this game the player controls a green leaf worm that burys through the underground to find all the seeds and consume them.
-       Each time the game is played the seeds are also in completely random places around the map and will have a random amount too, so each time a player plays through the game it will be a different experience and can't remeber/stratigise where to go to find these seeds.
-   </p>
-   <p>Engine & Tools: Unity, Rider 2019, C#, Github, Aseprite</p>
-   <div class="accordion" id="accordionExample"  style="background-color: lightgray">
-     <div class="accordion-item"  style="background-color: lightgray">
-
-         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive" style="background-color: #999999">
-           Methodology
-         </button>
-       <div id="collapseFive" class="accordion-collapse collapse hidden" aria-labelledby="headingFive" data-bs-parent="#accordionExample" style="background-color: DarkGray">
-         <div class="accordion-body">
-        <h4>Leaf Worm Overview</h4>
-        <p class="video"><iframe width="600" height="338" src="https://www.youtube.com/embed/pXjggiVS7ho" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-        <p>
-          Leaf worm was a game created for the Global Games Jam 2023 just by myself and the addition of free assets
-       I could find online over two days. For that particular games jam, I decided to compete by myself to see what I could do
-       in this short period of time and not have to rely on other memebers of a team.This was my first experience making a 2d game in unity which I think was quite successful.
-       The game is quite underdeveloped however it is playable and each time it is played the game will be different, there isn’t
-       much more difficulty since it's more about collecting items at the player's pace but it's a fun little game I'm happy I could work on and create.
-        </p>
-        <h4>Worm Movement</h4>
-        <a target="_blank" href="images\leafwormdevelopment.png">
-        <img class="method" style="width: 90%" style="height: 90%" style="align-content: left"src="images\leafwormdevelopment.png" alt="Leaf Worm working in progress">
-      </a>
-        <br>
-        <p>The worm makes use of basic 2d unity movment that uses W, A, S, D to move in all directions by changing a varaible that effects the players location either positive or negative to go in that direction.However for the actual worm body
-        that has its down the distinctive movement wiggle to create the effect of a worm digging through the ground.I researched into different ways of doing this and found examples that worked for tentacles so this would also work in this situation and could be changed alot
-        to suit the behaviours of a worm such as the amount the body wiggles by its self.For the worm body it uses a line renderer that then creates lots of different
-        segments along the body that can be moved which then means it will effect the others if one moves.So this updates with the players movement and reacts to it making it feel like the body is still in the ground just following the head.
-      </p>
-      <p>
-        To make the worm body look more like it has worm movement it needed to wiggle when moving across the screen.Which means that every so often the body will just wiggle which appears when quick enough like the body is wiggling back and forth.This then also works because the segments will
-        take the information from the one in front of it so it creates the effect of the wiggle going down the body.To apply this force it creates a Vector 3 and applies a smooth damp to each segment, which then uses multipliers to change the speed or wiggle amount.
-      </p>
-        </p>
-        <h4>Seed Spawning</h4>
-        <a target="_blank" href="images\leafwormspawner.PNG">
-        <img class="method" style="width: 40%" style="height: 40%" style="align-content: left"src="images\leafwormspawner.PNG" alt="Leaf Worm working in progress">
-      </a>
-        <br>
-        <p>
-          To spawn in the seeds created a seed prefab that just had a line trace going upward as i wanted the seeds to still spawn in a roots when its spawned in and i found it then also helps the player
-          when they are trying to find the seed it makes it less tedious to check each corner.So for the spawning of these prefabs i could then take a area and on the start of the level just spawn a certain amount of that prefab anywhere on that item, so in this case
-        it was the background map that could just add mesh so that the seeds wont spawn outside the camera view, but with this spawner it can be changed in the editor how many to spawn in or a range between two points.</p>
-      </div>
-         </div>
-       </div>
-     </div>
- </div>
-
- </div>
-
- <div class="gallery">
-   <a target="_blank" href="images/towerdefence.png">
-     <img src="images/towerdefence.png" alt="Tower Defence Cover">
-   </a>
-   <br><br>
-     <p>
-       The soon to be titled tower defence project is a top down 3d fantasy tower defence game where the player has to fight through various waves of enemies to complete the level and unlock more.To battle these enemies the player is equipped with a arsonal of
-       magical and mysterious character that can destroy all kinds of monsters that come there way.With the vast amount of enemies types, the player has to stratigise with the placement of thier turrets and what ones to place on that slot. So that the player can improve on their defences even more the game includes
-       a multi level upgrade system that can helps take down the most powerful enemies.
-</p>
-   <p>Engine & Tools: Unity, Rider 2019, C#, Github, Mixamo, Photoshop</p>
-   <div class="accordion" id="accordionExample"  style="background-color: lightgray">
-     <div class="accordion-item"  style="background-color: lightgray">
-         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix" style="background-color: #999999">
-           Methodology
-         </button>
-       <div id="collapseSix" class="accordion-collapse collapse hidden" aria-labelledby="headingSix" data-bs-parent="#accordionExample" style="background-color: DarkGray">
-         <div class="accordion-body" >
-           <h4>Tower Defence Current Development</h4>
-           <p class="video"><iframe width="600" height="338" src="https://www.youtube.com/embed/pXjggiVS7ho" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
-           <p>
-             This tower defence game is currently my main focus of work, in my last year of university I have been
-             given the chance to work on a game for a good chunk of my last term which gives me well enough time to
-              finish the game, polish it and publish to a games website such as steam.
-           </p>
-           <p>
-             This is my first attempt at building a 3d game using Unity as I usually use Unreal Engine 4 so
-             the development of this game has been much more challenging to learn a engine and editor while creating a game but has massively improved my skills within using Unity and a better knowledge of different game development engines.
-           </p>
-           <h4>Turret Targetting</h4>
-           <a target="_blank" href="images\towerdefencespawner.PNG">
-           <img class="method" style="width: 70%" style="height: 70%" src="images\towerdefenceturret.PNG" alt="Tower Defence working in progress">
-         </a>
-           <br>
-           <p>
-             Since there needed to be a main script that all the turrets used or could branch off the best way was to have all the basic targetting and firing functions all together so it could then be called
-             later on wether it was firing a AOE or multiple projectiles.For this the turret will try to find any enemy with the tag of enemy and make it a target, which then can be used to rotate the turret
-             towards that enemy making it look like its aiming at that targetted enemy.</p>
-
-             <p>This update enemy function is invoked every zero point five seconds from the start of the turret being spawned so it can then
-             update the target while its already got a target as for this targetting system it needed to focus on the closest target to that turret, however this could be a feature that could be changed later on to
-             let the player choose what enemy to target as this would add more stragtegic targetting of enemies.To make sure that the turrets don't shoot all the enemies on the screen there is a added check to see if that targetted enemy is
-             in the turrets range which is a variable that can be changed on each turret to match their playstyle.
-             </p>
-             <h4>Spawner Wave System</h4>
-           <a target="_blank" href="images\towerdefencespawner.PNG">
-           <img class="method" style="width: 60%" style="height: 60%" src="images\towerdefencespawner.PNG" alt="Tower Defence working in progress">
-         </a>
-           <br>
-           <p>The wave system for this game needed to be quite complex so that it could spawn however many enemies, with that selected prefab so that each round would then be different or it can progress through difficulty.This lead me to use a IEnumerator as it
-           can be called every chosen amount of seconds which for this would be the round countdown so as soon as the countdown ends the round begins.In this function it will go along the array of the wave index and for each item in the array it will spawn a certain amount of enemies.
-           The actual function to spawn the enemy is simple just getting to that point needs to go through the checks to see if it can, then what one to spawn.This script can then be attached to the spawner in the level which then makes the enemies spawn from that location on the map, making it very easy to
-           change this in future levels.
-         </p>
-
-           <h4>Enemy Behaviour</h4>
-           <a target="_blank" href="images\towerdefencespawner.PNG">
-           <img class="method" style="width: 50%" style="height: 50%" src="images\towerdefenceenemymovement.png" alt="Tower Defence working in progress">
-         </a>
-           <br>
-           <p>
-             For the enemies to walk along the path towards their goal they needed a movement script however this needed to be changed instead of a simple moveto, so that the enemies route could be changed for each level or pretty much made for each levels map.
-             To solve this problem i used waypoints in a array around the map that that enemy could go towards until they have reached it and then find a new one to go towards repeating this process until there isn't any more waypoints left in the array.To do this the
-            waypoints are all added to a array at the beginning of the game so it doesn't need to be set each time to a perticular number, which the enemy can then go to each object in that array, marking off the one it has been to.If there is no more points for the
-            enemy to walk along it will then end its movement path and remove a life from the player.
-
-            <p>One of the small additions i added to the movement for the enemy was different changing speeds so the maximum and minimum speed can be set for each enemy and it will pick a number between the two
-            and that variable will become the speed of that enemy, i found this helped making the enemies more realistic and not like walking drones with the same exact movement speed.</p>
-
-             </p>
-       </div>
-     </div>
- </div>
-
-
- </div>
-
-
 
      </section2>
-
-
    </main>
-
    <footer>
      <p class="footer text">© Charlie Mason</p>
      <p class="footer text">All content and trademarks property of their respective owners.</p>
