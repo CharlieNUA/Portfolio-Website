@@ -3,7 +3,7 @@
 body {
   margin: 0;
   max-width: auto;
-  min-width: 605px;
+  min-width: 610px;
   font-family: Trebuchet MS;
   background-color: LightGray;
 }
@@ -109,6 +109,7 @@ hr{
 
    div.Titles{
      padding-top: 2px;
+     padding-left: 15px;
      max-height:1000px;
      max-width:1000px;
      text-align: left;
