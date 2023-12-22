@@ -203,6 +203,7 @@ button.accordion-button{
      border: 1px;
      max-width:1000px;
      min-width:600px;
+     position: relative;
 
 
    }
@@ -365,6 +366,13 @@ img.smallgallery{
   position: relative;
   margin: auto;
 }
+.slideshow-container img {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
 
 
 /* Next & previous buttons */
@@ -414,6 +422,7 @@ img.smallgallery{
 div.mySlides img{
 
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  min-width: 500px;
 }
 
 }
