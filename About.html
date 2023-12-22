@@ -79,83 +79,21 @@
 </ul>
        <br>
   </section1>
-  <section2>
+  <section>
+  	<img class="smallgallery" src="images/plantgamexample.png" alt="Plant Game Gameplay">
+  	<img class="smallgallery"src="images/cargameexample.png" alt="Unreal Car Gameplay">
+  	<img class="smallgallery" src="images/robotexample.png" alt="Robot Game Gameplay">
+  	<img class="smallgallery" src="images/greenmagicexample.png" alt="Tower Defence Green Magic">
+  	<img class="smallgallery"src="images/unitycartgameexample.png" alt="Unity Car Gameplay">
+  	<img  class="smallgallery"class="smallgallery"src="images/leafwormbackgroundexample.png" alt="Leaf Worm Background">
+  <img class="smallgallery"src="images/angryrobotexample.png" alt="Angry Robot Gameplay" alt="Leaf Worm Background">
+  	<img class="smallgallery" src="images/openglexample.png" alt="OpenGL Projects">
 
-  <div class="previewgallery">
-    <a target="_blank" href="images/angryrobotexample.png">
-      <img src="images/angryrobotexample.png" alt="Angry Robot Gameplay" width="800" height=auto>
-    </a>
-
-  </div>
-  <div class="previewgallery">
-    <a target="_blank" href="images/towerdefenceexample.png">
-      <img src="images/towerdefenceexample.png" alt="Tower Defence Archers" width="800" height=auto>
-    </a>
-  </div>
-
-  <div class="previewgallery">
-    <a target="_blank" href="images/kandykillersexample.png">
-      <img src="images/kandykillersexample.png" alt="Killer Kandys Gameplay" width="800" height=auto>
-    </a>
-
-  </div>
-
-  <div class="previewgallery">
-    <a target="_blank" href="images\laserbeamexample.png">
-      <img src="images\laserbeamexample.png" alt="Laser Beam Gameplay" width="800" height=auto>
-    </a>
-
-  </div>
-
-  <div class="previewgallery">
-    <a target="_blank" href="images/plantgamexample.png">
-      <img src="images/plantgamexample.png" alt="Plant Game Gameplay" width="800" height=auto>
-    </a>
-
-  </div>
-  <div class="previewgallery">
-    <a target="_blank" href="images/cargameexample.png">
-      <img src="images/cargameexample.png" alt="Unreal Car Gameplay" width="800" height=auto>
-    </a>
-
-  </div>
-  <div class="previewgallery">
-    <a target="_blank" href="images/robotexample.png">
-      <img src="images/robotexample.png" alt="Robot Game Gameplay" width="800" height=auto>
-    </a>
-
-  </div>
-  <div class="previewgallery">
-    <a target="_blank" href="images/greenmagicexample.png">
-      <img src="images/greenmagicexample.png" alt="Tower Defence Green Magic" width="800" height=auto>
-    </a>
-  </div>
-  <div class="previewgallery">
-    <a target="_blank" href="images/unitycartgameexample.png">
-      <img src="images/unitycartgameexample.png" alt="Unity Car Gameplay" width="800" height=auto>
-    </a>
-
-  </div>
-  <div class="previewgallery">
-    <a target="_blank" href="images/leafwormbackgroundexample.png">
-      <img src="images/leafwormbackgroundexample.png" alt="Leaf Worm Background" width="800" height=auto>
-    </a>
-  </div>
-  <div class="previewgallery">
-    <a target="_blank" href="images/leafwormexample.png">
-      <img src="images/leafwormexample.png" alt="Leaf Worm" width="800" height=auto>
-    </a>
-  </div>
-  <div class="previewgallery">
-    <a target="_blank" href="images/openglexample.png">
-      <img src="images/openglexample.png" alt="OpenGL Projects" width="800" height=auto>
-    </a>
-  </div>
-
+  </section>
   </section2>
    </main>
 
-   <br><br><br><br><br><br><br><br><br><br>
+   <br><br><br><br>
 
 
 
@@ -171,6 +109,39 @@
             $(".loader-wrapper").fadeOut("slow");
           });
       </script>
+      <script>
+             $(window).on("load",function(){
+               $(".loader-wrapper").fadeOut("slow");
+             });
+         </script>
+         <script>
+         let slideIndex = 1;
+         showSlides(slideIndex);
+
+         function plusSlides(n) {
+           showSlides(slideIndex += n);
+         }
+
+         function currentSlide(n) {
+           showSlides(slideIndex = n);
+         }
+
+         function showSlides(n) {
+           let i;
+           let slides = document.getElementsByClassName("mySlides");
+           let dots = document.getElementsByClassName("dot");
+           if (n > slides.length) {slideIndex = 1}
+           if (n < 1) {slideIndex = slides.length}
+           for (i = 0; i < slides.length; i++) {
+             slides[i].style.display = "none";
+           }
+           for (i = 0; i < dots.length; i++) {
+             dots[i].className = dots[i].className.replace(" active", "");
+           }
+           slides[slideIndex-1].style.display = "block";
+           dots[slideIndex-1].className += " active";
+         }
+         </script>
 
   </body>
 </html>

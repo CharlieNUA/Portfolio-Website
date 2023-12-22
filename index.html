@@ -63,51 +63,65 @@ Join me on this journey of creativity and discovery as I share my game developme
 </p>
        <br>
 
-              <div class="smallgallery">
-          <a target="_blank" href="images\spacecapnipexample.png">
-            <img src="images\spacecapnipexample.png" alt="Space cat nip Gameplay" width=auto height="600">
+       <div class="slideshow-container">
 
-          </a>
-
-        </div>
-       <div class="smallgallery">
-         <a target="_blank" href="images/zoomexample.png">
-           <img src="images/zoomexample.png" alt="Ue4 hover craft Gameplay" width="600" height=auto>
-         </a>
+       <div class="mySlides fade">
+         <div class="numbertext">1 / 6</div>
+         <img src="images/NineRoundsRapidExample.png" style="width:100%">
 
        </div>
 
-
-       <div class="smallgallery">
-         <a target="_blank" href="images/turret.jpg">
-           <img src="images/turret.jpg" alt="tuerrt game Gameplay" width=auto height="600">
-         </a>
+       <div class="mySlides fade">
+         <div class="numbertext">2 / 6</div>
+         <img src="images/towerdefenceexample2.png" style="width:100%">
 
        </div>
 
+       <div class="mySlides fade">
+         <div class="numbertext">3 / 6</div>
+         <img src="images/plantgamexample2.png" style="width:100%">
+
+       </div>
+       <div class="mySlides fade">
+         <div class="numbertext">4 / 6</div>
+         <img src="images/NineRoundsRapidExample2.png" style="width:100%">
+
+       </div>
+       <div class="mySlides fade">
+         <div class="numbertext">5 / 6</div>
+         <img src="images/cargameexample2.png" style="width:100%">
+
+       </div>
+       <div class="mySlides fade">
+         <div class="numbertext">6 / 6</div>
+         <img src="images/brewmasterexample.png" style="width:100%">
+
+       </div>
+
+       <a class="prev" onclick="plusSlides(-1)">❮</a>
+       <a class="next" onclick="plusSlides(1)">❯</a>
+
+       </div>
+       <br>
 
      </section1>
      <section2>
 
        <h3>Current Projects</h3>
-
+       <div class="gallery">
+       <a href="https://store.steampowered.com/app/2259390/NINE_ROUNDS_RAPID/">
+           <img src="images\NineRoundsRapid.jpeg" alt="NineRoundsRapid cover">
+         </a>
+       </div>
+       <div class="gallery">
+       <a href="https://charliemason01.itch.io/box-game">
+           <img src="images\BoxGame.png" alt="Box Game cover">
+         </a>
+       </div>
          <div class="gallery">
                <a href="Projects.html">
                  <img src="images/towerdefence.png" alt="Tower Defence Cover">
               </a>
-
-           <div class="gallery">
-               <a href="https://charliemason01.itch.io/leaf-worm">
-                 <img src="images\leafwormbanner.png" alt="Leaf Worm cover">
-               </a>
-
-          <div class="gallery">
-          <a href="https://charliemason01.itch.io/laser-beam">
-              <img src="images\LaserBeam.png" alt="Laser beam cover">
-            </a>
-
-          </div>
-
    </div>
      </section2>
 
@@ -127,5 +141,35 @@ Join me on this journey of creativity and discovery as I share my game developme
             $(".loader-wrapper").fadeOut("slow");
           });
       </script>
+      <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+      }
+      </script>
+
   </body>
+
 </html>
